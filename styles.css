@@ -260,3 +260,97 @@ button[type="submit"]:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Estilos para dispositivos de pantalla pequeña */
+
+@media only screen and (max-width: 600px) {
+    /* Modifica los estilos de acuerdo a tus necesidades */
+    
+    /* Ajusta el ancho del cuerpo y los márgenes */
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Ajusta el tamaño de fuente y la altura de línea */
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  
+    /* Ajusta el ancho y la altura de las imágenes */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Ajusta el tamaño de fuente y la altura de línea del texto */
+    p, li {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  
+    /* Ajusta el ancho de los contenedores de sección */
+    section {
+      width: 100%;
+    }
+  
+    /* Ajusta el tamaño y la posición del menú de navegación */
+    nav {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background-color: #333;
+    }
+  
+    /* Ajusta el tamaño y la posición de los elementos del menú */
+    nav a {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      color: #fff;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+    }
+  
+    /* Ajusta el estilo del botón */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      margin: 20px 0;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  
+    /* Ajusta los estilos del formulario */
+    form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    /* Ajusta los estilos de los elementos de formulario */
+    label, input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Ajusta el ancho y la altura del botón de envío */
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
