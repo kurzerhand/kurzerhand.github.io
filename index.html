@@ -1,75 +1,262 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Portafolio de Desarrollador Web</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+/* Estilos para el encabezado y el menú sticky */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+header a {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+header a:hover {
+  color: #000;
+}
+body {
+    font-family: 'Roboto';
+}
 
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#hero">Inicio</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
-    <main>
-      <section id="hero">
-        <h1>Bienvenido a mi portafolio</h1>
-        <p>Soy una artihta talentosa que busca dinero para huir del nido primo
-            , catas o no? asi que venga soltando la guita.</p>
-        <a href="#" class="btn">Ver proyectos</a>
-      </section>
-      <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Me llamo Bellatrix y soy parte de los los mortifagos Los mortífagos son los seguidores incondicionales de Lord Voldemort. Sus orígenes se remontan a los años en que Lord Voldemort estuvo estudiando en Hogwarts, momento en que comenzó a cobrar poder.</p>
-        <a href="#" class="btn">Ver CV</a>
-      </section>
-      <section id="projects">
-        <h2>Proyectos</h2>
-        <div class="project-card">
-          <img src="project-1.png" alt="Proyecto 1">
-          <h3>Proyecto 1</h3>
-          <p>Este es un proyecto que desarrollé en....[ aqui pones tus proyectos BEA]</p>
-          <a href="#">Ver proyecto</a>
-        </div>
-        <div class="project-card">
-          <img src="project-2.png" alt="Proyecto 2">
-          <h3>Proyecto 2</h3>
-          <p>Este es un proyecto que desarrollé parte dos y todos los que quieraas</p>
-          <a href="#">Ver proyecto</a>
-        </div>
-      </section>
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <form action="https://formspree.io/f/mnqyvyjw" method="post" >
-          <div class="input-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre...">
-          </div>
-          <div class="input-group">
+/* Estilos para la sección del héroe */
+#hero {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+#hero h1 {
+  color: #333;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+#hero p {
+  color: #666;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+#hero .btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#hero .btn:hover {
+  background-color: #000;
+  cursor: pointer;
+}
 
+/* Estilos para la sección "Sobre mí" */
+#about {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+#about h2 {
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#about p {
+  color: #666;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+#about .btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+#about .btn:hover {
+  background-color: #000;
+  cursor: pointer;
+}
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico...">
-          </div>
-          <div class="input-group">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="message" required placeholder="Escribe tu mensaje..."></textarea>
-          </div>
-          <button type="submit">Enviar</button>
-        </form>
+/* Estilos para la sección de proyectos */
+#projects {
+  background-color: #f7f7f7;
+  padding: 4rem 0;
+  text-align: center;
+}
+#projects h2 {
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.project-card {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.project-card img {
+  max-width: 100%;
+  height: auto;
+}
+.project-card h3 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.project-card p {
+  color: #666;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.project-card .btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.project-card .btn:hover {
+  background-color: #000;
+  cursor: pointer;
+}
 
-        
-      </section>
-      
-    </main>
-    <footer>
-      <p>© 2023 Silvio Aguilar. Todos los derechos reservados.</p>
-    </footer>
-  </body>
-</html>
+/* Estilos para el pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+footer p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* Estilos para el formulario de contacto */
+#contacto {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 0.25rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 2px #333;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* Media queries para hacer el formulario responsive */
+@media (max-width: 600px) {
+  form {
+    max-width: 90%;
+  }
+
+  .input-group input[type="text"],
+  .input-group input[type="email"],
+  .input-group textarea {
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
