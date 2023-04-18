@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # kurzerhand.github.io
 Proyecto WEB
-Pero que ondaaa
+Pero que ondaaa andaale!
 =======
 # Getting Started with Create React App
 
