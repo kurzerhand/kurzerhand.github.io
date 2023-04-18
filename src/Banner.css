@@ -1,0 +1,84 @@
+/* Banner.css */
+.banner {
+  height: 400px;
+  background-image: url("https://th.bing.com/th/id/OIP.6P_hmVpy8981SQVEUPOSwwHaCo?pid=ImgDet&rs=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner-image {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20vh;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* SearchBar.css */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-bar-btn {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #bdecb6;
+}
+.search-options{
+  margin-top: 10px;
+  
+}
+.btn-map{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
+.btn-filter{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
+.btn-sort{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
