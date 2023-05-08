@@ -1,0 +1,186 @@
+.reducirT{
+  margin-bottom: -100%;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top:  50px;
+    justify-content: space-around;
+  }
+  
+  .service-card img {
+    width: 300px;
+    height: 600px;
+  }
+
+  .imgDerecha {
+    width: 300px;
+    height: 500px;
+    margin-right: 20px;
+    order: 2; /* Cambiar el orden de la imagen */
+  }
+  
+  .service-info {
+    background-color: '';
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .service-info h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: black;
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  @keyframes animacionText {
+    from {
+      /* Establecer la opacidad y la posición inicial */
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      /* Establecer la opacidad y la posición final */
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .service-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+    margin-left: 30px;
+
+    animation-name: animacionText;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    
+  }
+  
+  .service-info p {
+    margin-bottom: 0;
+    font-size: 20px;
+    background-color: #6FCFF5;
+    border-radius: 20px;
+    padding:20px;
+    max-width: 700px;
+  }
+
+  /* Estilos para dispositivos móviles */
+
+  /* Estilos para pantallas con un ancho máximo de 767px */
+@media (max-width: 767px) {
+  .service-card {
+    flex-direction: column; /* Apilar los elementos verticalmente */
+    padding: 10px; /* Reducir el padding */
+    margin-top: 20px; /* Reducir el margen superior */
+  }
+
+  .service-card img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Ajustar la altura automáticamente */
+    margin-right: 0; /* Quitar el margen derecho */
+    margin-bottom: 30px; /* Añadir un margen inferior */
+    margin-top: -100px;
+  }
+  .imgDerecha{
+    order: 0;
+  }
+
+  .service-info {
+    margin-left: 0; /* Quitar el margen izquierdo */
+    margin-top: -100px;
+  }
+
+  .service-info h2 {
+    font-size: 28px; /* Reducir el tamaño de fuente */
+    margin-left: 0; /* Quitar el margen izquierdo */
+    text-align: center; /* Centrar el texto */
+
+    animation-name: animacionText;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes animacionText {
+    from {
+      /* Establecer la opacidad y la posición inicial */
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      /* Establecer la opacidad y la posición final */
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .service-info h3 {
+    font-size: 18px; /* Reducir el tamaño de fuente */
+    margin-left: 0; /* Quitar el margen izquierdo */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .service-info p {
+    font-size: 16px; /* Reducir el tamaño de fuente */
+    padding: 10px; /* Reducir el padding */
+    max-width: none; /* Eliminar el ancho máximo */
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.social-media img {
+  width: 30px;
+  /* filter: invert(1); */
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.5);
+}
+
+.text-footer{
+  font-size: 20px;
+}
+
+
+
