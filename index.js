@@ -4,15 +4,15 @@ const interval = 10; // intervalo en milisegundos
 const target = 1000;
 const duration = 3000; // duración en milisegundos
 const increment = target / (duration / interval);
-
 let counterStarted = false;
+let timer = null;
 
 function startCounter() {
   if (counterStarted) {
     return;
   }
   counterStarted = true;
-  const timer = setInterval(() => {
+  timer = setInterval(() => {
     count += increment;
     if (count >= target) {
       clearInterval(timer);
@@ -24,10 +24,8 @@ function startCounter() {
 
 function isVisible(element) {
   const rect = element.getBoundingClientRect();
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
-  const windowWidth =
-    window.innerWidth || document.documentElement.clientWidth;
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
   const vertInView = rect.top <= windowHeight && rect.top + rect.height >= 0;
   const horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
   return vertInView && horInView;
@@ -39,51 +37,47 @@ document.addEventListener("scroll", () => {
   }
 });
 
-
-
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('scrolled', window.scrollY > 0);
-  });
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 0);
+});
 
-  
+const textoAnimado = document.querySelector('.texto-animado');
 
-  const textoAnimado = document.querySelector('.texto-animado');
+function mostrarTexto() {
+textoAnimado.classList.add('animated', 'fadeInLeft');
+textoAnimado.style.opacity = 1;
+}
 
-  function mostrarTexto() {
-    textoAnimado.classList.add('animated', 'fadeInLeft');
-    textoAnimado.style.opacity = 1;
-  }
-  
-  window.addEventListener('load', mostrarTexto);
-  
-  
-  
+window.addEventListener('load', () => {
+setTimeout(() => {
+mostrarTexto();
+// Reproducir el video aquí
+const video = document.getElementById('miVideo');
+video.play();
+}, 1000); // Esperar 1 segundo antes de mostrar el texto y reproducir el video
+});
 
 const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links li');
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
 
-  burger.addEventListener('click', () => {
-    // Desplegar el menú
-    nav.classList.toggle('nav-active');
+burger.addEventListener('click', () => {
+// Desplegar el menú
+nav.classList.toggle('nav-active');
+// Animar las líneas de la hamburguesa
+burger.classList.toggle('toggle');
 
-    // Animar las líneas de la hamburguesa
-    burger.classList.toggle('toggle');
-
-    // Animar los enlaces de navegación
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-      }
-    });
-  });
+// Animar los enlaces de navegación
+navLinks.forEach((link, index) => {
+  if (link.style.animation) {
+    link.style.animation = '';
+  } else {
+    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+  }
+});
+});
 };
 
 navSlide();
-
-
-  
