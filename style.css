@@ -357,8 +357,8 @@ video {
     margin-bottom: 4rem;
   }
   .servicio img {
-    width: 130%;
-    margin-left: -65px;
+    width: 100%;
+    margin-left: 0px;
   }
 }
 
