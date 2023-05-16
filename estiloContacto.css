@@ -1,81 +1,132 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
+    box-sizing: border-box; /* Agregado para evitar desbordamiento del contenido */
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+    background-image: url('./recursos/FondoContacto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .container {
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
-}
-
-h2 {
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  h2 {
     text-align: center;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     margin-bottom: 20px;
-}
-
-label {
+  }
+  
+  label {
     display: block;
     margin-bottom: 5px;
-}
-
-input, textarea {
+  }
+  
+  input,
+  textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-button {
+    font-size: 16px;
+  }
+  
+  button {
     display: block;
-    width: 104%;
+    width: 100%;
     padding: 10px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-button:hover {
+    font-size: 20px;
+  }
+  
+  button:hover {
     background-color: #45a049;
-}
-
-.hidden {
+  }
+  
+  .hidden {
     display: none;
-}
-
-#success-message {
-    background-color: #4CAF50;
+  }
+  
+  #success-message {
+    background-color: #77dd77;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     border-radius: 4px;
     text-align: center;
     margin-top: 20px;
     margin-left: 20px;
-}
-
-
-
-
-.menu{
+    margin-right: 20px;
+  }
+  
+  .menu {
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
-    box-shadow: -10px 1px 10px 1px gray;
+    box-shadow: -1px 1px 10px 1px gray;
     border-radius: 4px;
-}
-.atras{
+    
+  }
+  
+  .atras {
     text-decoration: none;
     font-size: 20px;
     color: white;
     background-color: #4CAF50;
     padding: 10px;
     border-radius: 4px;
-    
-}
-.atras:hover{
+  }
+  
+  .atras:hover {
     background-color: #45a049;
-}
+  }
+  
+  /* Estilos responsivos para dispositivos móviles */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+  
+    input,
+    textarea {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    #success-message {
+      margin: 10px;
+    }
+  
+    .menu {
+      padding: 15px;
+    }
+  
+    .atras {
+      width: 100%;
+    }
+  }
+  
