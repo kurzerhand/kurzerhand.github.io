@@ -81,3 +81,19 @@ navLinks.forEach((link, index) => {
 };
 
 navSlide();
+
+// Loader
+
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  // Ocultar el loader y mostrar el contenido de la página
+  function showContent() {
+    loader.style.display = "none";
+    content.style.display = "block";
+  }
+
+  // Retrasar la visualización del contenido para simular la carga
+  setTimeout(showContent, 1000); // Cambia el valor según tu necesidad
+});
