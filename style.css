@@ -325,6 +325,7 @@ video {
   width: calc(25% - 1rem);
   margin-bottom: 2rem;
   margin-top: -100px;
+  
 }
 
 .servicio img {
@@ -332,6 +333,7 @@ video {
   height: auto;
   margin-top: 50px;
   margin-left: -30px;
+  
 }
 
 .servicio h3 {

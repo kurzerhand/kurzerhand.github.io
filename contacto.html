@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" type="text/css" href="estiloContacto.css">
+</head>
+<body>
+    <div class="menu">
+    <a class="atras" href="./index.html">← Volver a Inicio</a>
+</div>
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="success-message" class="hidden">
+            <p>Gracias por ponerte en contacto</p>
+        </div>
+    </div>
+
+    <script src="contacto.js"></script>
+</body>
+</html>
+
+
+
+
+
